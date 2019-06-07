@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    Client View List
+  </title>
+</head>
+
+<body>
+  <!-- Editable table -->
+<div class="card">
+    
+    <div class="card-body">
+      <div id="table" class="table-editable">
+        
+        <table class="table table-bordered table-responsive-md table-striped text-center">
+          <tr>
+            
+            <th class="text-center">Client Application Name</th>
+            <th class="text-center">Application Name To Register</th>
+            <th class="text-center">Client Application Owner</th>
+            <th class="text-center">Client Application Owner Email</th>
+            <th class="text-center">Message</th>
+            
+            
+          </tr>
+          <tr *ngFor="let client of clientlist; let id = index">
+           
+            <td>{{client.clientApplicationName}}</td>
+            <td>{{client.applicationNameToRegister}}</td>
+            <td >{{client.clientApplicationOwner}}</td>
+            <td >{{client.clientApplicationOwnerEmail}}</td>
+            <td >{{client.message}}</td>
+            
+                      
+           
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- Editable table -->
+  
+  </body>
+  

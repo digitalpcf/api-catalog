@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    Application View List
+  </title>
+</head>
+
+<body>
+  <div class="container" style="padding-left: 10px; padding-right: 10px">
+  <!-- Editable table -->
+<div class="card">
+    
+    <div class="card-body">
+      <div id="table" class="table-editable">
+        
+        <table class="table table-bordered table-responsive-md table-striped text-center">
+          <tr>
+            
+            <th class="text-center">Application Name</th>
+            <th class="text-center">Application Api Url</th>
+            <th class="text-center">Application Owner</th>
+            <th class="text-center">Application Owner Email</th>
+            <th class="text-center">Message</th>
+            <th class="text-center">Actions</th>
+            
+          </tr>
+          <tr *ngFor="let app of applist; let id = index">
+           
+            <td>{{app.applicationName}}</td>
+            <td>{{app.applicationApiUrl}}</td>
+            <td >{{app.applicationOwner}}</td>
+            <td >{{app.applicationOwnerEmail}}</td>
+            <td >{{app.message}}</td>
+            <td >
+                <button (click)="gotoaddclient(id)">Subscribe</button>
+              </td>
+            
+                      
+           
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Editable table -->
+  
+  </body>
+  
