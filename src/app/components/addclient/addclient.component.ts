@@ -11,11 +11,9 @@ import { FormsModule }   from '@angular/forms';
 export class AddclientComponent implements OnInit {
   submitted = false;
   
-  client: AddClient[] = [];
-  constructor(private data: DataService) { 
- 
-    
-  }
+  client = new AddClient(' ',' ',' ',' ');
+
+  constructor(private data: DataService) { }
   
   registrationkey: any;
   
