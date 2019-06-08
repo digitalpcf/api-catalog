@@ -16,6 +16,7 @@ export class GetappdetailsService {
     console.log("Hi");
     return this.http.get('https://apicatalog.apps.dev.pcf-aws.com/findAllApi')
       .pipe(map(result => result));
+      
   }
 
   }

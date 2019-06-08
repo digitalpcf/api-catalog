@@ -17,73 +17,23 @@ export class AddclientComponent implements OnInit {
     
   }
   
- /* registrationkey: any;
-  editField: string;
- 
-  newclientList: Array<any> = [
-    // tslint:disable-next-line:max-line-length
-    {  applicationNameToRegister : '', clientApplicationName: '', clientApplicationOwner: '', clientApplicationOwnerEmail: ''  },
-
-   ];
-  clientObject: any;
-  postclientObject: any;
+  registrationkey: any;
   
-  addclientList: AddClient[] = [];*/
   ngOnInit() {
    
-   /* this.registrationkey = this.data.sendregistrationkey();
+    this.registrationkey = this.data.sendregistrationkey();
     console.log(this.registrationkey);
-    this.addclientList = this.addclientList.concat(this.newclientList);
-    console.log(this.addclientList);
-    */
+ 
   }
   onSubmit()
    { 
   this.submitted = true;
   console.log(this.client);
+  
+  this.data.addclient(this.client);
+  window.alert("You have successfully added a new client for application with registration key as"+ this.registrationkey);
  }
- /* updateList(id: number, property: string, event: any) {
-    const editField = event.target.textContent;
-    this.addclientList[id][property] = editField;
  
-   // console.log(this.addclientList);
-  }
-  SaveClientDetails(id) {
-    console.log('Length of array', this.addclientList.length);
-     for (let i = id; i < this.addclientList.length; i++) {
-      this.clientObject = {
-        applicationNameToRegister: this.addclientList[i].applicationNameToRegister,
-        clientApplicationOwner: this.addclientList[i].clientApplicationOwner,
-        clientApplicationOwnerEmail: this.addclientList[i].clientApplicationOwnerEmail,
-        clientApplicationName: this.addclientList[i].clientApplicationName,
-     
-      
-      };
-     console.log(this.clientObject);
-     this.postclientObject = this.clientObject;
-   }
-   this.data.addclient(this.postclientObject).subscribe(
-    response => console.log(response),
-      error => console.log(error),       // error
-      () => {console.log('completed');
-      window.alert('Row is inserted');
-       this.postclientObject = {};
-       }
-        // complete
- );
- this.newclientList = [
-  // tslint:disable-next-line:max-line-length
-  {  applicationNameToRegister : '', clientApplicationName: '', clientApplicationOwner: '', clientApplicationOwnerEmail: ''   },
-];
-  }
- 
-  changeValue(id: number, property: string, event: any) {
-    this.editField = event.target.textContent;
-  }*/
- /* get values() { 
-    return JSON.stringify(this.client); 
-     console.log(this.client);
-}*/
 }
   
  

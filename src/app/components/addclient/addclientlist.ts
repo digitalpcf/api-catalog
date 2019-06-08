@@ -1,8 +1,8 @@
 export class AddClient{
-    constructor(
-    public applicationNameToRegister: any,
-    public clientApplicationName: any,
-    public clientApplicationOwner: any,
-    public clientApplicationOwnerEmail: any
-    ){}
+    
+    public applicationNameToRegister: any;
+    public clientApplicationName: any;
+    public clientApplicationOwner: any;
+    public clientApplicationOwnerEmail: any;
+    
 }

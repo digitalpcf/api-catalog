@@ -9,20 +9,16 @@ import {map} from 'rxjs/operators';
 })
 export class DataService {
   registrationkey: any;
-  private messageSourcePrev = new BehaviorSubject('default message');
-  private messageSourceTransfer = new BehaviorSubject({name: 'default', data: []}); 
-  currentMessagePrev = this.messageSourcePrev.asObservable(); // var for accessing
-  currentDataTransfer = this.messageSourceTransfer.asObservable();
+ 
+
   constructor(private http: Http) { }
-  PreviousMessage(message: string) {
-    this.messageSourcePrev.next(message)
-  }
-  DataTransfer(message:any){
-    this.messageSourceTransfer.asObservable();
-  }
+
+ 
   addclient(data: Data): Observable<any>{
     
       console.log(data);
+      
+     
    const headers = new Headers({ 'Content-Type': 'application/json' });
     const options = new RequestOptions({ headers: headers });
    

@@ -4,6 +4,6 @@ export class appList {
     public applicationOwner: any;
     public applicationOwnerEmail: any;
     public message: any;
-    public registrationkey: any;
+    public registrationKey: any;
 
 }
