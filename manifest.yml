@@ -1,0 +1,10 @@
+applications:
+- name: apicatalog-ui
+  path: ./dist/api-demo
+  disk_quota: 1G
+  instances: 1
+  memory: 1G
+  buildpack: staticfile_buildpack
+  routes:
+  - route: apicatalog-ui.apps.dev.pcf-aws.com
+  stack: cflinuxfs3
